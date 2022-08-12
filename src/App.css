@@ -1,0 +1,13 @@
+.shine {
+  transition: .5s ease-in-out;
+}
+
+.shine:hover {
+  border-color: white;
+  /* filter: blur(0px); */
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 1);
+}
+
+.icon {
+  transition: .3s ease-in-out;
+}
