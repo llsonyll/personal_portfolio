@@ -2,10 +2,15 @@
   transition: .5s ease-in-out;
 }
 
+
 .shine:hover {
   border-color: white;
   /* filter: blur(0px); */
   box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 1);
+}
+
+.shine-red:hover {
+  box-shadow: 0px 0px 10px 1px rgb(255, 0, 0);
 }
 
 .icon {

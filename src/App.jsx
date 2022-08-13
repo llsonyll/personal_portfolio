@@ -20,7 +20,7 @@ function App() {
             alt="assetLogo"
           />
         </a>
-        <div className="dark:text-white my-4 text-center font-normal ">
+        <div className="dark:text-white my-4 text-center font-normal text-base ">
           Hello, I'm{" "}
           <a
             href="https://www.linkedin.com/in/josep-jairo-rojas-baca-34975a1bb/"
@@ -45,7 +45,7 @@ function App() {
         id="page2"
       >
         <a
-          className="flex items-center justify-center gap-2 bg-red-600 text-white px-4 py-1"
+          className="shine shine-red flex items-center justify-center gap-2 bg-red-600 text-white px-4 py-1"
           href="#page1"
         >
           <span className="">Go Top</span>
