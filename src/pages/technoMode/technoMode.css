@@ -1,0 +1,16 @@
+/* navy : #0a192f */
+/* lightNavy : #112240 */
+/* ligthersNavy : #233554 */
+/* navyShadow : rgba(2,12,27,0.7) */
+
+.content {
+  background-color: #0a192f;
+  color: rgb(204, 214, 246);
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
+}
+
+.navbar {
+  transition: 0.5s ease-in-out;
+  user-select: none;
+}
