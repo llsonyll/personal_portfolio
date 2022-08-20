@@ -6,11 +6,89 @@
 .content {
   background-color: #0a192f;
   color: rgb(204, 214, 246);
-  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
-    system-ui, sans-serif;
+  /* font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif; */
 }
 
 .navbar {
   transition: 0.5s ease-in-out;
   user-select: none;
+}
+
+.userName {
+  font-size: clamp(40px, 8vw, 80px);
+}
+
+.side_wrapper {
+  position: fixed;
+  bottom: 0px;
+  writing-mode: vertical-rl;
+  color: #a8b2d1;
+}
+
+.side_wrapper::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  background: #a8b2d1;
+  /* position: absolute; */
+}
+
+.right_side {
+  right: 40px;
+}
+
+.left_side {
+  left: 40px;
+}
+
+.profile {
+  position: relative;
+  transition: 2s ease-in;
+  z-index: 1;
+}
+
+.profile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #64ffdb;
+  border-radius: 2px;
+  z-index: -1;
+  transform: translate(14px, 14px);
+  transition: 0.2s ease-in-out;
+}
+
+.profile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #64ffdb;
+  opacity: 0.3;
+  z-index: 50;
+  border-radius: 2px;
+  transition: 0.2s ease-in;
+}
+
+.profile:hover::before {
+  opacity: 0;
+}
+
+.profile:hover::after {
+  transform: translate(10px, 10px);
+}
+
+.list-item {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.list-item::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #64ffda;
 }
