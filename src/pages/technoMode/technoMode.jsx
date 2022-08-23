@@ -5,6 +5,7 @@ import logo from "../../assets/NiceLogo.png";
 import profile from "../../assets/profile_photo.jpg";
 
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { BiLinkExternal } from "react-icons/bi";
 
 // import Navbar from "./components/navbar";
 
@@ -135,7 +136,7 @@ const TechnoMode = () => {
           <div className="content-about">
             Hello! My name is Josep and I enjoy creating things that live on the
             internet. My interest in web development started back in 2021 when I
-            decided to try developing some trickiy projects for collegue — turns
+            decided to try developing some trickiy projects for collegue - turns
             out researching and deploying some projects that taught me a lot
             about HTML & CSS and more stuff!
           </div>
@@ -149,8 +150,8 @@ const TechnoMode = () => {
 
           <div className="content-about">
             I also develop a project that covers everything you need to build a
-            web app as social network similar to Facebook or Twitter using Node
-            & React.
+            web app as social network similar to Facebook and Twitter using
+            React & Node JS.
           </div>
 
           <div className="content-about">
@@ -321,9 +322,58 @@ const TechnoMode = () => {
       </section>
       <section
         id="work"
-        className="h-screen flex justify-center items-center lg:px-60 px-20"
+        className="flex justify-center max-w-4xl md-0 mx-auto md:px-2 px-7 flex-col md:min-h-[340px] py-[100px] "
       >
-        <h1 className="text-white"> Work </h1>
+        <div className="title flex items-baseline gap-2 mb-10">
+          <div className=" text-[#64ffda] font-semibold text-xl tracking-wider">
+            03.
+          </div>
+          <div className="font-bold text-2xl"> Some Things I've built </div>
+          <div className="row h-0.5 bg-ligthersNavy opacity-50 flex-1 my-auto"></div>
+        </div>
+
+        <div className="project flex justify-end">
+          <div className="description md:text-right text-left flex flex-col justify-center md:items-end items-center md:p-0 p-4 md:w-1/2 w-full z-10">
+            <h5 className="text-neonGreen text-sm mb-1"> Featured Project</h5>
+            <h1 className="text-lightesSlate text-2xl font-bold mb-5">
+              Dogs Project
+            </h1>
+            <div className="info shadow-2xl bg-lightNavy p-5 rounded-md text-lightSlate text-lg">
+              A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm,
+              and more.{" "}
+              <strong className="text-neonGreen font-semibold">
+                Available on Visual Studio Marketplace, Package Control, Atom
+                Package Manager
+              </strong>
+              , and{" "}
+              <strong className="text-neonGreen font-semibold "> npm</strong>.
+            </div>
+
+            <div className="tecnologies flex gap-4 md:justify-end justify-center mt-5 text-lightSlate text-sm">
+              <span> React JS </span>
+              <span> Node JS </span>
+              <span> PostgreSQL </span>
+              <span> HTML </span>
+              <span> CSS </span>
+            </div>
+            <div className="redirect flex gap-4 justify-end mt-6 text-2xl">
+              <a href="" target="_blank">
+                <FaGithub />
+              </a>
+              <a href="" target="_blank">
+                <BiLinkExternal />
+              </a>
+            </div>
+          </div>
+          <a href="" target="_blank" className="image">
+            <img
+              src="https://brittanychiang.com/static/3b4d6e8f44baf7e6d7a0ed4b3e4d8d39/d5dc4/halcyon.webp"
+              title="source: imgur.com"
+              alt="project_image"
+              className="h-full md:w-auto w-full object-cover"
+            />
+          </a>
+        </div>
       </section>
       <section
         id="contact"

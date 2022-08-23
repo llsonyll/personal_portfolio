@@ -8,7 +8,8 @@ module.exports = {
       'ligthersNavy': '#233554',
       'navyShadow': '#020c1bb3',
       'neonGreen': '#64ffda',
-      'lightes-slate': '#ccd6f6'
+      'lightesSlate': '#ccd6f6',
+      'lightSlate': "#a8b2d1"
     },
   },
   extend: {},
