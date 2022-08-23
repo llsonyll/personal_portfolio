@@ -1,0 +1,112 @@
+.project {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.project .image {
+  grid-area: 1/ 6 / -1 / -1;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  position: relative;
+  /* z-index: 1;     */
+  cursor: pointer;
+  grid-column: 1 / -1;
+  opacity: 0.25;
+  transition: 0.5s ease-in;
+}
+
+.project .description {
+  position: relative;
+  /* z-index: 2; */
+  grid-area: 1 / 1 / -1 / 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  grid-column: 1 / -1;
+}
+
+.project:nth-child(2n + 1) .description {
+  text-align: center;
+}
+
+.project .description .info {
+  text-align: start;
+}
+
+.project:nth-child(2n + 1) .description .redirect {
+  justify-content: center;
+}
+
+.project:nth-child(2n + 1) .description .tecnologies {
+  justify-content: center;
+}
+
+/* .project .description .info {
+  border: 1px solid blue;
+} */
+
+@media screen and (min-width: 768px) {
+  /* .project {
+    background-color: green;
+  } */
+
+  .project .image {
+    opacity: 1;
+  }
+
+  .project .imgContainer {
+    position: relative;
+  }
+
+  .project .imgContainer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #64ffdb;
+    opacity: 0.1;
+    z-index: 3;
+    border-radius: 2px;
+    transition: 0.2s ease-in;
+  }
+
+  .project .imgContainer:hover::before {
+    opacity: 0;
+  }
+
+  .project:nth-child(2n + 1) .image {
+    grid-column: 1 / 8;
+  }
+
+  .project:nth-child(2n) .image {
+    grid-column: 6 / -1;
+  }
+
+  .project:nth-child(2n + 1) .description {
+    grid-column: 7 / -1;
+    align-items: flex-end;
+  }
+
+  .project:nth-child(2n) .description {
+    grid-column: 1 / 7;
+  }
+
+  .project .description .info {
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    padding: 1.25rem;
+    border-radius: 4px;
+    color: #a8b2d1;
+    font-size: 1.125rem;
+    position: relative;
+    z-index: 10;
+    background-color: #112240;
+  }
+
+  .project:nth-child(2n + 1) .description .info {
+    text-align: right;
+  }
+
+  .project:nth-child(2n + 1) .description .tecnologies {
+    justify-content: flex-end;
+  }
+}
