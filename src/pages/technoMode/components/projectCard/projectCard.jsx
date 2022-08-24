@@ -3,49 +3,48 @@ import "./projectCard.css";
 import { FaGithub } from "react-icons/fa";
 import { BiLinkExternal } from "react-icons/bi";
 
-const ProjectCard = () => {
+const ProjectCard = ({ proyect }) => {
   return (
-    <li className="project mb-24">
-      <div className="description md:p-0 p-4">
-        <h5 className="text-neonGreen text-sm mb-1"> Featured Project</h5>
-        <a className="text-lightesSlate text-2xl font-bold mb-5">
-          Dogs Project
+    <li className="project mb-24" key={proyect.id}>
+      <div className="description md:p-0 p-4 md:z-auto z-[2]">
+        <h5 className="text-neonGreen text-sm mb-1"> {proyect.type}</h5>
+        <a
+          href={proyect.deployLink}
+          target="_blank"
+          className="text-lightesSlate text-2xl font-bold mb-5"
+        >
+          {proyect.name}
         </a>
-        <div className="info">
-          A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and
-          more.{" "}
-          <strong className="text-neonGreen font-semibold">
-            Available on Visual Studio Marketplace, Package Control, Atom
-            Package Manager
-          </strong>
-          , and <strong className="text-neonGreen font-semibold "> npm</strong>.
-        </div>
+        <div className="info">{proyect.description}</div>
 
-        <ul className="tecnologies flex gap-4  mt-5 text-lightSlate text-sm">
-          <li> React JS </li>
-          <li> Node JS </li>
-          <li> PostgreSQL </li>
-          <li> HTML </li>
-          <li> CSS </li>
+        <ul className="tecnologies flex gap-4 mt-5 text-lightSlate text-sm relative z-10 flex-wrap">
+          {proyect.tecnologies.length > 0 &&
+            proyect.tecnologies.map((tec, index) => {
+              return (
+                <li
+                  className="text-xs text-center min-w-fit"
+                  key={`tech-${index}`}
+                >
+                  {tec}
+                </li>
+              );
+            })}
         </ul>
         <div className="redirect flex gap-4 mt-6 text-2xl">
-          <a href="" target="_blank">
+          <a href={proyect.repoLink} target="_blank">
             <FaGithub />
           </a>
-          <a href="" target="_blank">
+          <a href={proyect.deployLink} target="_blank">
             <BiLinkExternal />
           </a>
         </div>
       </div>
-      <div className="image">
-        <a
-          href="https://llsonyll.github.io/PI_dogs/"
-          target="_blank"
-          className="z-[1]"
-        >
+      <div className="image flex items-center">
+        {/* <a href={proyect.deployLink} target="_blank" className="z-[1]" title="source: imgur.com"> */}
+        <a href={proyect.deployLink} target="_blank" className="z-[1]">
           <div className="imgContainer">
             <img
-              src="https://brittanychiang.com/static/3b4d6e8f44baf7e6d7a0ed4b3e4d8d39/d5dc4/halcyon.webp"
+              src={proyect.deployImg}
               title="source: imgur.com"
               alt="project_image"
               className="h-full md:w-auto w-full object-cover rounded-md"

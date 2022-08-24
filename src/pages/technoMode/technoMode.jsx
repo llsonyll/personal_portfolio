@@ -6,6 +6,7 @@ import profile from "../../assets/profile_photo.jpg";
 
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import ProjectCard from "./components/projectCard/projectCard";
+import { projects } from "./data/proyects";
 
 // import Navbar from "./components/navbar";
 
@@ -333,10 +334,10 @@ const TechnoMode = () => {
         </div>
 
         <ul className="projects p-0 m-0">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {projects.length > 0 &&
+            projects.map((p) => {
+              return <ProjectCard proyect={p} key={p.id} />;
+            })}
         </ul>
       </section>
       <section
