@@ -325,7 +325,7 @@ const TechnoMode = () => {
         id="work"
         className="flex justify-center max-w-4xl md-0 mx-auto md:px-2 px-7 flex-col md:min-h-[340px] py-[100px] "
       >
-        <div className="title flex items-baseline gap-2 mb-10">
+        <div className="title flex items-baseline gap-2 mb-16">
           <div className=" text-[#64ffda] font-semibold text-xl tracking-wider">
             03.
           </div>
@@ -342,10 +342,46 @@ const TechnoMode = () => {
       </section>
       <section
         id="contact"
-        className="h-screen flex justify-center items-center lg:px-60 px-20"
+        className="flex justify-center items-center lg:px-60 px-20"
       >
-        <h1 className="text-white"> Contact </h1>
+        <div className="content flex flex-col justify-center items-center">
+          <div className="text-neonGreen">04. What's Next?</div>
+          <div className="font-bold text-5xl my-4 text-center">
+            Get In Touch
+          </div>
+          <div className="max-w-md text-center">
+            Currently I'm looking for new opportunities, my inbox is always
+            open. Whether you have a question or just want to say hi, I’ll try
+            my best to get back to you!
+          </div>
+
+          <a
+            className="bg-transparent border-[1px] border-neonGreen text-xs p-3 rounded-md text-neonGreen hover:bg-[#64ffda1a] ml-3 cursor-pointer mt-8"
+            href="mailto:sony_s07@hotmail.es"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Contact Me
+          </a>
+        </div>
       </section>
+
+      <div className="mt-40 pb-6 flex flex-col items-center justify-center text-sm">
+        <a
+          className="text-lightSlate hover:text-neonGreen transition-all duration-100 ease-in"
+          href="https://github.com/llsonyll/personal_portfolio"
+          target="_blank"
+        >
+          Built by Josep Jairo Rojas Baca
+        </a>
+        <a
+          className="text-lightSlate hover:text-neonGreen transition-all duration-100 ease-in"
+          href="https://github.com/bchiang7/v4"
+          target="_blank"
+        >
+          Design by Brittany Chiang
+        </a>
+      </div>
     </main>
   );
 };
