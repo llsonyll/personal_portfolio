@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 :root {
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Roboto', sans-serif;
-  /* font-size: 16px;
-  line-height: 24px;
-  font-weight: 400; */
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,12 +10,16 @@
   -webkit-text-size-adjust: 100%;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
   margin: 0;
   box-sizing: border-box;
+  font-family: "DynaPuff", cursive;
+  font-family: "Inter", sans-serif;
+  font-family: "Manrope", sans-serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Red Hat Text", sans-serif;
 }

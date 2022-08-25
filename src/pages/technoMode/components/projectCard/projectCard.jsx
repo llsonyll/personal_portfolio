@@ -3,7 +3,7 @@ import "./projectCard.css";
 import { FaGithub } from "react-icons/fa";
 import { BiLinkExternal } from "react-icons/bi";
 
-const ProjectCard = ({ proyect }) => {
+const ProjectCard = ({ proyect, ligth = false }) => {
   return (
     <li className="project mb-24" key={proyect.id}>
       <div className="description md:p-0 p-4 md:z-auto z-[2]">
@@ -31,9 +31,11 @@ const ProjectCard = ({ proyect }) => {
             })}
         </ul>
         <div className="redirect flex gap-4 mt-6 text-2xl">
-          <a href={proyect.repoLink} target="_blank">
-            <FaGithub />
-          </a>
+          {proyect.repoLink && (
+            <a href={proyect.repoLink} target="_blank">
+              <FaGithub />
+            </a>
+          )}
           <a href={proyect.deployLink} target="_blank">
             <BiLinkExternal />
           </a>
