@@ -43,8 +43,12 @@ const ProjectCard = ({ proyect, ligth = false }) => {
       </div>
       <div className="image flex items-center">
         {/* <a href={proyect.deployLink} target="_blank" className="z-[1]" title="source: imgur.com"> */}
-        <a href={proyect.deployLink} target="_blank" className="z-[1]">
-          <div className="imgContainer">
+        <a
+          href={proyect.deployLink}
+          target="_blank"
+          className="z-[1] md:h-3/4 h-auto"
+        >
+          <div className="imgContainer md:h-full h-auto">
             <img
               src={proyect.deployImg}
               title="source: imgur.com"
