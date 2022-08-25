@@ -1,0 +1,27 @@
+.navbar {
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  backdrop-filter: blur(10px);
+  background-color: rgba(10, 25, 47, 0.85);
+  height: 96px;
+}
+
+.sidebar {
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.shadow-xd {
+  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+  height: 70px;
+}
+
+.open {
+  transform: translateX(0);
+}
+
+.close {
+  transform: translateX(100vw);
+}
+
+.mobileBtn {
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
