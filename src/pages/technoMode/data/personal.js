@@ -44,6 +44,8 @@ export const me = {
         }
     ],
     email: 'sony_s07@hotmail.es',
+    profileURL: 'https://res.cloudinary.com/dr9htpiy2/image/upload/v1661452628/profile_photo_yl6kq8.jpg',
+    logoURL: 'https://res.cloudinary.com/dr9htpiy2/image/upload/v1661452636/NiceLogo_kfwfie.png',
     phone: '950368711',
     contactQuoute: "Currently I'm looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!",
     resumeUrl: 'https://drive.google.com/file/d/1E8Jf7upzrJ96vNjHD_6CR9xhXnlnThuM/view?usp=sharing',

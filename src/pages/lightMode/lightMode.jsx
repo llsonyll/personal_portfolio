@@ -1,5 +1,4 @@
 import { FaArrowAltCircleRight, FaArrowAltCircleUp } from "react-icons/fa";
-import Logo from "./assets/NiceLogo.png";
 
 const LightMode = () => {
   return (
@@ -10,11 +9,11 @@ const LightMode = () => {
         id="page1"
       >
         <a target="_blank" href="https://github.com/llsonyll">
-          <img
+          {/* <img
             className="shine md:h-auto h-40 border-2 border-black"
             src={Logo}
             alt="assetLogo"
-          />
+          /> */}
         </a>
         <div className="dark:text-white my-4 text-center font-normal text-base ">
           Hello, I'm{" "}

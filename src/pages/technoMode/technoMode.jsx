@@ -1,16 +1,12 @@
 import "./technoMode.css";
 
-import { useEffect, useState } from "react";
-import logo from "../../assets/NiceLogo.png";
-import profile from "../../assets/profile_photo.jpg";
+import { useState } from "react";
 
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import ProjectCard from "./components/projectCard";
 import Navbar from "./components/navbar";
 import { projects } from "./data/proyects";
 import { me } from "./data/personal";
-
-// import Navbar from "./components/navbar";
 
 const TechnoMode = () => {
   const [workPlace, setWorkPlace] = useState("WorldConnect");
@@ -88,7 +84,7 @@ const TechnoMode = () => {
               {me.description}
             </p>
             <a
-              href="#experience"
+              href="#work"
               className="bg-transparent border-2 border-[#64ffda] text-xs p-3 rounded-md text-[#64ffda] hover:bg-[#64ffda1a] cursor-pointer"
             >
               Check out my projects
@@ -126,7 +122,7 @@ const TechnoMode = () => {
             <div className="profile">
               <img
                 className="relative h-64 object-cover rounded-sm"
-                src={profile}
+                src={me.profileURL}
                 alt="profile"
               />
             </div>

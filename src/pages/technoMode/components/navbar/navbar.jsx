@@ -1,6 +1,6 @@
 import "./navbar.css";
 
-import logo from "../../../../assets/NiceLogo.png";
+import { me } from "../../data/personal";
 import { useEffect, useState } from "react";
 
 import { ImMenu } from "react-icons/im";
@@ -52,7 +52,7 @@ const Navbar = ({ menuState, setMenuState }) => {
       } ${navbarShadow ? "shadow-xd" : ""}`}
     >
       <a href="#home">
-        <img src={logo} alt="logo" className="w-10 h-10 rounded-full" />
+        <img src={me.logoURL} alt="logo" className="w-10 h-10 rounded-full" />
       </a>
       <div className="md:block hidden">
         <a
