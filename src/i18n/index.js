@@ -17,7 +17,7 @@ i18next.use(initReactI18next)
                     home: {
                         greetings: 'Hi, my name is',
                         phrase: 'I build things for the web.',
-                        description: "I'm a web and mobile developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on get a competitive job, that allows me to improve my skills and become a senior developer.",
+                        description: "I'm a web and mobile developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on get a competitive job, that allows me to improve my skills and become a Senior Developer.",
                         action: 'Check out my projects',
                     },
                     about: {
