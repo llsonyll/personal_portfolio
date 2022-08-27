@@ -17,14 +17,14 @@ i18next.use(initReactI18next)
                     home: {
                         greetings: 'Hi, my name is',
                         phrase: 'I build things for the web.',
-                        description: "I'm a web and mobile developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on get a competitive job, that allows me improve my skills and become a senior developer.",
+                        description: "I'm a web and mobile developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on get a competitive job, that allows me to improve my skills and become a senior developer.",
                         action: 'Check out my projects',
                     },
                     about: {
                         title: 'About me',
                         paragraph: {
-                            first: 'Hello! My name is Josep and I enjoy creating things that live on the internet. My interest in web development started back in 2021 when I decided to try developing some trickiy projects for collegue - turns out researching and deploying some projects that taught me a lot about HTML & CSS and more stuff!',
-                            second: 'Fast-forward to today, and I’ve had the privilege of working at an techEd startup. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.',
+                            first: 'Hello! My name is Josep and I enjoy creating things that live on the internet. My interest in web development started back in 2020 when I decided to build some tricky projects for college — turns out researching and deploying some projects that taught me a lot about HTML & CSS and more stuff!',
+                            second: 'Fast-forward to today, and I’ve had the privilege of working at an TechEd startup. My main focus these days is building accessible, inclusive products and digital experiences',
                             third: 'I also develop a project that covers everything you need to build a web app as social network similar to Facebook and Twitter using React & Node JS.',
                         },
                         tecnologies: 'Here are a few technologies I’ve been working with recently:',
@@ -49,7 +49,7 @@ i18next.use(initReactI18next)
                         },
                         work3: {
                             name: 'Henry',
-                            role: 'Henry Bootcamp',
+                            role: 'Henry Bootcamp - Student',
                             date: 'April - August 2022',
                             info_1: 'Learn Advanced Javascript concepts',
                             info_2: 'Improvement soft-skills as communication, team group, agile metodologies and others',
@@ -93,7 +93,7 @@ i18next.use(initReactI18next)
                         title: 'Sobre mi',
                         paragraph: {
                             first: 'Hola! Mi nombre es Josep y disfruto creando cosas para la red. Mi interes en el desarrollo web nacio en el 2020, cuando desarrolle algunos proyectos para la universidad, aprendiendo HTML, CSS y muchos más durante la investigación, y despliegue de estos.',
-                            second: 'A dia de hoy, he tenido el privilegio de trabajar para StartUp EdTech peruana y mi principal objetivo ahora es desarrollar productos inclusivos accesibles y experiencias digitales.',
+                            second: 'A día de hoy, he tenido el privilegio de trabajar para StartUp EdTech peruana y mi principal objetivo ahora es desarrollar productos inclusivos accesibles y experiencias digitales.',
                             third: 'Recientemente participe en un projecto que cubre una gran variedad de funcionalidedes de una red social similar a Facebook o Twitter usando React y NodeJS',
                         },
                         tecnologies: 'Estas son algunas tecnologias con las que he trabajado recientemente:',
@@ -118,7 +118,7 @@ i18next.use(initReactI18next)
                         },
                         work3: {
                             name: 'Henry',
-                            role: 'Henry Bootcamp',
+                            role: 'Henry Bootcamp - Estudiante',
                             date: 'Abril - Agosto 2022',
                             info_1: 'Aprendizaje de conceptos avanzados de Javascript',
                             info_2: 'Mejora de habilidades blandas como comunicación, trabajo en equipo, metodologias agiles y otros',
