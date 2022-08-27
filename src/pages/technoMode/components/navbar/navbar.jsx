@@ -54,9 +54,9 @@ const Navbar = ({ menuState, setMenuState }) => {
 
   useEffect(() => {
     if (lng) {
-      i18n.changeLanguage("en");
-    } else {
       i18n.changeLanguage("es");
+    } else {
+      i18n.changeLanguage("en");
     }
   }, [lng]);
 
