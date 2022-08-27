@@ -8,7 +8,11 @@ import Navbar from "./components/navbar";
 import { projects } from "./data/proyects";
 import { me } from "./data/personal";
 
+import { useTranslation } from "react-i18next";
+
 const TechnoMode = () => {
+  const { t } = useTranslation();
+
   const [workPlace, setWorkPlace] = useState("WorldConnect");
   const [menuState, setMenuState] = useState(false);
 
@@ -32,7 +36,7 @@ const TechnoMode = () => {
             </li>
           ))}
           <button className="list-item cursor-pointer" onClick={() => {}}>
-            show more...
+            {t("showMore")}
           </button>
         </ul>
       </div>
@@ -72,22 +76,22 @@ const TechnoMode = () => {
         <section id="home" className="h-screen flex flex-col justify-center">
           <div className="lg:px-60 md:px-40 px-8">
             <h1 className="text-neonGreen text-base mb-8 pl-1">
-              Hi, my name is
+              {t("home.greetings")}
             </h1>
             <h2 className="userName text-[#ccd6f6] font-extrabold">
-              {me.secondName} {me.fatherLastName}.
+              {me.secondName} {me.fatherLastName}
             </h2>
             <h3 className="userName text-[#8892b0] font-extrabold">
-              I build things for the web.
+              {t("home.phrase")}
             </h3>
             <p className="user-description text-[#8892b0] max-w-md mt-5 mb-12">
-              {me.description}
+              {t("home.description")}
             </p>
             <a
               href="#work"
               className="bg-transparent border-2 border-[#64ffda] text-xs p-3 rounded-md text-[#64ffda] hover:bg-[#64ffda1a] cursor-pointer"
             >
-              Check out my projects
+              {t("home.action")}
             </a>
           </div>
         </section>
@@ -105,16 +109,18 @@ const TechnoMode = () => {
               <div className="row h-0.5 bg-ligthersNavy opacity-50 flex-1 my-auto"></div>
             </div>
 
-            {me.aboutParagraphs.map((paragraph, index) => {
-              return (
-                <div key={`paragraph-${index}`} className="content-about mb-2 ">
-                  {paragraph}
-                </div>
-              );
-            })}
+            <div className="content-about mb-2 ">
+              {t("about.paragraph.first")}
+            </div>
+            <div className="content-about mb-2 ">
+              {t("about.paragraph.second")}
+            </div>
+            <div className="content-about mb-2 ">
+              {t("about.paragraph.third")}
+            </div>
 
             <div className="content-about">
-              Here are a few technologies I’ve been working with recently:
+              {t("about.tecnologies")}
               {tecnologiesRow()}
             </div>
           </div>
@@ -136,49 +142,113 @@ const TechnoMode = () => {
             <div className=" text-[#64ffda] font-semibold text-xl tracking-wider">
               02.
             </div>
-            <div className="font-bold text-2xl"> Where I've worked </div>
+            <div className="font-bold text-2xl"> {t("experience.title")} </div>
             <div className="row h-0.5 bg-ligthersNavy opacity-50 flex-1 my-auto"></div>
           </div>
 
           <div className="flex md:flex-row flex-col gap-6">
             <div className="flex md:flex-col flex-row md:overflow-x-visible overflow-x-auto md:pb-0 pb-4">
-              {me.experience.map((exp) => {
-                return (
-                  <button
-                    key={exp.id}
-                    className={` ${
-                      workPlace === exp.name
-                        ? " text-[#64ffda] bg-lightNavy opacity-100 md:border-l-2 md:border-t-0 border-t-2 border-l-0 border-[#64ffda]"
-                        : ""
-                    } bg-navy hover:bg-lightNavy opacity-50 hover:opacity-100 px-3 py-1 text-start ease-in-out duration-200`}
-                    onClick={() => setWorkPlace(exp.name)}
-                  >
-                    <span> {exp.name} </span>
-                  </button>
-                );
-              })}
+              <button
+                className={` ${
+                  workPlace === "WorldConnect"
+                    ? " text-[#64ffda] bg-lightNavy opacity-100 md:border-l-2 md:border-t-0 border-t-2 border-l-0 border-[#64ffda]"
+                    : ""
+                } bg-navy hover:bg-lightNavy opacity-50 hover:opacity-100 px-3 py-1 text-start ease-in-out duration-200`}
+                onClick={() => setWorkPlace("WorldConnect")}
+              >
+                <span> WorldConnect </span>
+              </button>
+              <button
+                className={` ${
+                  workPlace === "FractalUp"
+                    ? " text-[#64ffda] bg-lightNavy opacity-100 md:border-l-2 md:border-t-0 border-t-2 border-l-0 border-[#64ffda]"
+                    : ""
+                } bg-navy hover:bg-lightNavy opacity-50 hover:opacity-100 px-3 py-1 text-start ease-in-out duration-200`}
+                onClick={() => setWorkPlace("FractalUp")}
+              >
+                <span> FractalUp </span>
+              </button>
+              <button
+                className={` ${
+                  workPlace === "Henry"
+                    ? " text-[#64ffda] bg-lightNavy opacity-100 md:border-l-2 md:border-t-0 border-t-2 border-l-0 border-[#64ffda]"
+                    : ""
+                } bg-navy hover:bg-lightNavy opacity-50 hover:opacity-100 px-3 py-1 text-start ease-in-out duration-200`}
+                onClick={() => setWorkPlace("Henry")}
+              >
+                <span> Henry </span>
+              </button>
             </div>
             <div className="tabContent border-white">
-              {me.experience.map((exp) => {
-                return (
-                  workPlace === exp.name && (
-                    <div className="py-1" key={exp.id}>
-                      <h1 className="font-bold text-lg">{exp.role}</h1>
-                      <h5 className="text-[#a8b2d1] mb-6"> {exp.date} </h5>
+              {workPlace === "WorldConnect" && (
+                <div className="py-1">
+                  <h1 className="font-bold text-lg">
+                    {t("experience.work1.role")}
+                  </h1>
+                  <h5 className="text-[#a8b2d1] mb-6">
+                    {t("experience.work1.date")}
+                  </h5>
 
-                      <ul className="ml-5 text-[#8892b0]">
-                        {exp.info.map((inf, index) => {
-                          return (
-                            <li key={`inf-${index}`} className="list-item">
-                              {inf}
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </div>
-                  )
-                );
-              })}
+                  <ul className="ml-5 text-[#8892b0]">
+                    <li className="list-item">
+                      {t("experience.work1.info_1")}
+                    </li>
+                    <li className="list-item">
+                      {t("experience.work1.info_2")}
+                    </li>
+                    <li className="list-item">
+                      {t("experience.work1.info_3")}
+                    </li>
+                  </ul>
+                </div>
+              )}
+              {workPlace === "FractalUp" && (
+                <div className="py-1">
+                  <h1 className="font-bold text-lg">
+                    {t("experience.work2.role")}
+                  </h1>
+                  <h5 className="text-[#a8b2d1] mb-6">
+                    {t("experience.work2.date")}
+                  </h5>
+
+                  <ul className="ml-5 text-[#8892b0]">
+                    <li className="list-item">
+                      {t("experience.work2.info_1")}
+                    </li>
+                    <li className="list-item">
+                      {t("experience.work2.info_2")}
+                    </li>
+                    <li className="list-item">
+                      {t("experience.work2.info_3")}
+                    </li>
+                  </ul>
+                </div>
+              )}
+              {workPlace === "Henry" && (
+                <div className="py-1">
+                  <h1 className="font-bold text-lg">
+                    {t("experience.work3.role")}
+                  </h1>
+                  <h5 className="text-[#a8b2d1] mb-6">
+                    {t("experience.work3.date")}
+                  </h5>
+
+                  <ul className="ml-5 text-[#8892b0]">
+                    <li className="list-item">
+                      {t("experience.work3.info_1")}
+                    </li>
+                    <li className="list-item">
+                      {t("experience.work3.info_2")}
+                    </li>
+                    <li className="list-item">
+                      {t("experience.work3.info_3")}
+                    </li>
+                    <li className="list-item">
+                      {t("experience.work3.info_4")}
+                    </li>
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -190,7 +260,7 @@ const TechnoMode = () => {
             <div className=" text-[#64ffda] font-semibold text-xl tracking-wider">
               03.
             </div>
-            <div className="font-bold text-2xl"> Some Things I've built </div>
+            <div className="font-bold text-2xl"> {t("work.title")} </div>
             <div className="row h-0.5 bg-ligthersNavy opacity-50 flex-1 my-auto"></div>
           </div>
 
@@ -206,11 +276,11 @@ const TechnoMode = () => {
           className="flex justify-center items-center lg:px-60 px-20"
         >
           <div className="content flex flex-col justify-center items-center">
-            <div className="text-neonGreen">04. What's Next?</div>
+            <div className="text-neonGreen">04. {t("contact.title")}</div>
             <div className="font-bold text-5xl my-4 text-center">
-              Get In Touch
+              {t("contact.subTitle")}
             </div>
-            <div className="max-w-md text-center">{me.contactQuoute}</div>
+            <div className="max-w-md text-center">{t("contact.quote")}</div>
 
             <a
               className="bg-transparent border-[1px] border-neonGreen text-xs p-3 rounded-md text-neonGreen hover:bg-[#64ffda1a] ml-3 cursor-pointer mt-8"
@@ -218,7 +288,7 @@ const TechnoMode = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              Contact Me
+              {t("contact.action")}
             </a>
           </div>
         </section>
@@ -229,14 +299,14 @@ const TechnoMode = () => {
             href="https://github.com/llsonyll/personal_portfolio"
             target="_blank"
           >
-            Built by {me.fullName}
+            {t("extra.built")}
           </a>
           <a
             className="text-lightSlate hover:text-neonGreen transition-all duration-100 ease-in"
             href="https://github.com/bchiang7/v4"
             target="_blank"
           >
-            Design by Brittany Chiang
+            {t("extra.designed")}
           </a>
         </div>
       </main>

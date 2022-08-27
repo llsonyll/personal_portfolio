@@ -3,7 +3,10 @@ import "./projectCard.css";
 import { FaGithub } from "react-icons/fa";
 import { BiLinkExternal } from "react-icons/bi";
 
+import { useTranslation } from "react-i18next";
+
 const ProjectCard = ({ proyect, ligth = false }) => {
+  const { i18n } = useTranslation();
   return (
     <li className="project mb-24" key={proyect.id}>
       <div className="description md:p-0 p-4 md:z-auto z-[2]">
@@ -15,7 +18,11 @@ const ProjectCard = ({ proyect, ligth = false }) => {
         >
           {proyect.name}
         </a>
-        <div className="info">{proyect.description}</div>
+        <div className="info">
+          {i18n.resolvedLanguage === "en"
+            ? proyect.description
+            : proyect.descriptionES}
+        </div>
 
         <ul className="tecnologies flex gap-4 mt-5 text-lightSlate text-sm relative z-10 flex-wrap">
           {proyect.tecnologies.length > 0 &&
